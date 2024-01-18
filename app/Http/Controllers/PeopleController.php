@@ -10,7 +10,6 @@ class PeopleController extends Controller
     public function read(){
         $peoples = People::all();
         return response()->json([$peoples]);
-        //return view('People.index', ['peoples' => $peoples]);
     }
     
     public function create(Request $request){
@@ -18,7 +17,7 @@ class PeopleController extends Controller
         $newPeople->name=$request->name;
         $newPeople->surname=$request->surname;
         $newPeople->street=$request->street;
-        $newPeople->telno=$request->telno;
+        $newPeople->telnr=$request->telnr;
         $newPeople->country=$request->country;
         $newPeople->save();
         return response()->json("People Created Succesfully");
@@ -33,13 +32,13 @@ class PeopleController extends Controller
         }
 
         $newPeople->update();
-        return response->json("Product Updated Succesfully");
+        return response()->json("Product Updated Succesfully");
     
     }
 
     public function delete(Request $request){
         $people=People::findorfail($request->id)->delete();
-        return response->json("Product Deleted Succesfully");
+        return response()->json("Product Deleted Succesfully");
     }
 
     public function show(Request $request){

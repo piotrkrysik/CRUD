@@ -13,7 +13,7 @@ class People extends Model
         'name',
         'surname',
         'street',
-        'telno',
+        'telnr',
         'country'
     ];
 }

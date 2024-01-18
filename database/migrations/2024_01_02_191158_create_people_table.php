@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Faker\Factory as Faker;
 
 return new class extends Migration
 {
@@ -17,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('surname');
             $table->text('street');
-            $table->string('telno');
+            $table->string('telnr');
             $table->string('country');
             $table->timestamps();
         });
@@ -31,3 +30,4 @@ return new class extends Migration
         Schema::dropIfExists('people');
     }
 };
+

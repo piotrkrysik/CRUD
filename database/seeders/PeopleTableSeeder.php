@@ -20,7 +20,7 @@ class PeopleTableSeeder extends Seeder
                 'name' => $faker->firstName,
                 'surname' => $faker->lastName,
                 'street' => $faker->streetAddress,
-                'telno' => $faker->phoneNumber,
+                'telnr' => $faker->phoneNumber,
                 'country' => $faker->country,
                 'created_at' => now(),
                 'updated_at' => now(),
